@@ -1,3 +1,4 @@
+import ErrorAlert from 'features/ErrorAlert';
 import { useState } from 'react';
 import Button from 'shared/ui/Button';
 import Input from 'shared/ui/Input';
@@ -8,6 +9,7 @@ const App = () => {
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [userPass, setUserPass] = useState('');
+  const [error, setError] = useState(false);
 
   return (
     <div className="font-encode-sans">
@@ -17,7 +19,7 @@ const App = () => {
       <Button onClick={() => alert('click')} text="Add" size="md" color="green" />
       <Button onClick={() => alert('click')} text="Yes" size="md" color="blue" />
       <Button onClick={() => alert('click')} text="No" size="md" color="red" />
-      <Button onClick={() => alert('click')} text="Submit" size="lg" color="blue" />
+      <Button onClick={() => setError((state) => !state)} text="Submit" size="lg" color="blue" />
       <Input
         onChange={(e) => setUserName(e.target.value)}
         type="text"
@@ -36,6 +38,7 @@ const App = () => {
         placeholder="Enter your password"
         value={userPass}
       />
+      <ErrorAlert text="Error message" visible={error} />
     </div>
   );
 };
