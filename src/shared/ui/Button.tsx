@@ -1,5 +1,5 @@
 interface ButtonProps {
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   text: string;
   color: 'blue' | 'darkBlue' | 'red' | 'green';
   size: 'sm' | 'md' | 'lg';

@@ -7,8 +7,8 @@ interface ErrorAlertProps {
 
 const ErrorAlert: React.FC<ErrorAlertProps> = ({ text, visible }) => (
   <div
-    className={`w-full px-5 mx-auto cursor-pointer fixed transition-all duration-300 ${
-      visible ? 'top-3' : '-top-full'
+    className={`w-screen left-0 px-5 mx-auto cursor-pointer fixed transition-all duration-300 ${
+      visible ? 'top-4' : '-top-full'
     }`}
   >
     <div className="flex bg-fsd-red text-white text-xs items-center gap-1 p-2">
