@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  ignorePatterns: ['tailwind.config.js', '.eslintrc.cjs'],
+  ignorePatterns: ['tailwind.config.js', '.eslintrc.cjs', 'vite.config.ts'],
   extends: ['plugin:react/recommended', 'airbnb', 'airbnb-typescript', 'prettier'],
   overrides: [],
   parserOptions: {
