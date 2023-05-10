@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const Navbar = () => (
-  <div className="bg-slate-200 flex items-center justify-around py-4">
+  <div className="bg-slate-200 flex items-center justify-around py-4 relative">
     <Link to="/">
       <img src="/icons/fileIcon.svg" alt="" />
     </Link>

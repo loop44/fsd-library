@@ -1,7 +1,7 @@
 import LibraryBooks from 'widgets/LibraryBooks';
 
 const Favourite = () => (
-  <div>
+  <div className="h-full">
     <div className="bg-black py-5 px-10">
       <h1 className="text-white font-bold">Library - Favourite</h1>
     </div>

@@ -17,9 +17,6 @@ const LibraryBooks = () => {
   const getBooksFromLS = () => {
     const booksData = localStorage.getItem('books');
 
-    if (!booksData) {
-      localStorage.setItem('books', JSON.stringify([]));
-    }
     const booksArr: BookType[] = JSON.parse(booksData || '{}');
 
     setBooks(booksArr);
@@ -62,8 +59,8 @@ const LibraryBooks = () => {
   });
 
   return (
-    <div className="py-3 relative">
-      <div>
+    <div className="py-3 relative h-full">
+      <div className="h-full">
         {filteredBooks.map((item, index) => (
           <Book
             key={item.uid}

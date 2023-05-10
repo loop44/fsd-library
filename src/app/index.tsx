@@ -7,7 +7,7 @@ import { store } from './store';
 import './index.scss';
 
 const App = () => (
-  <div className="font-encode-sans">
+  <div className="font-encode-sans h-full">
     <Provider store={store}>
       <BrowserRouter>
         <Routing />

@@ -8,8 +8,8 @@ import RegisterPage from './Register';
 import SearchBooksPage from './SearchBooks';
 
 const Routing = () => (
-  <div className="flex flex-col h-screen">
-    <div className="flex-1">
+  <div className="flex flex-col h-full">
+    <div className="flex-1 mb-10">
       <Routes>
         <Route path="/" element={<Library />} />
         <Route path="/search" element={<SearchBooksPage />} />

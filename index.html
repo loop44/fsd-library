@@ -8,6 +8,13 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      const booksData = localStorage.getItem('books');
+
+      if (!booksData) {
+        localStorage.setItem('books', JSON.stringify([]));
+      }
+    </script>
     <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>

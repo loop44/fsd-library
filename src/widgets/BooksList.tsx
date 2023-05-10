@@ -14,9 +14,6 @@ const BooksList = () => {
   const setBookToDB = (book: BookType) => {
     const booksData = localStorage.getItem('books');
 
-    if (!booksData) {
-      localStorage.setItem('books', JSON.stringify([]));
-    }
     const booksArr: BookType[] = JSON.parse(booksData || '{}');
 
     const dublicateBook = booksArr.find((item) => item.uid === book.uid);
@@ -30,8 +27,8 @@ const BooksList = () => {
   };
 
   return (
-    <div className="py-3">
-      <div>
+    <div className="py-3 h-full">
+      <div className="h-full">
         {books.map((item, index) => (
           <Book
             key={item.uid}
